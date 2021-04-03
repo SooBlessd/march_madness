@@ -1,25 +1,59 @@
 # require 'pry'
 class MarchMadness::CLI 
   
-    
+   
   def call
     MarchMadness::Team.new
-    bracket
+    pick
     # record_sheet
     # math_stats
     puts "DID YOU DO It!?"
     goodbye
   end
 
-  def bracket
+  def pick
     puts "Welcome to this years March Madness Information Sheet:"
     #displays list of teams for each region
-    puts "Pick a Region: (E-East/W-West/M-Midwest/S-South)"
-    region = gets.strip
+    # puts "Pick a Region: (E-East/W-West/M-Midwest/S-South)"
+    pick_region
+    # region = gets.strip
+    #if user exits on region --> send to goodbye
     pick_team #(team) send it the team
     puts "YES"
-    # info?#(region)
+    info?#(region)
   end
+
+  def pick_region
+    input = nil
+    while input == nil || input != "exit"
+      puts "Pick a Region: (E-East/W-West/M-Midwest/S-South) or type exit"
+      input = gets.strip.downcase
+      #this could be a case statement
+      if input == "exit"
+        puts "See you later."
+      elsif input == "e"
+        puts "You picked the East!"
+        #display teams
+        break
+      elsif input == "w"
+        puts "You picked the West!"
+        #display teams
+        break
+      elsif input == "m"
+        puts "You picked the Midwest!"
+        #display teams
+        break
+      elsif input == "s"
+        puts "You picked the South!"
+        #display teams
+        break
+      else 
+        puts "Not sure what region you would like, pick a region." 
+        input = nil
+      end
+    end 
+  end
+
 
   def pick_team
     input = nil
@@ -74,6 +108,26 @@ class MarchMadness::CLI
     % wins =⅞ - 88%
     }
     puts team_stats
+  end
+
+  def info?
+    input = nil
+    while input == nil || input != "exit"
+      puts "R-Team Record Sheet  -or-  T-Team Math Stats"
+      input = gets.strip
+      if input == "exit"
+        puts "See you later."
+      elsif input.downcase == "t"
+        math_stats
+        break
+      elsif input.downcase == "r"
+        record_sheet
+        break
+      else 
+        puts "Not sure, if you want you are looking for." 
+        input = nil
+      end
+    end 
   end
 
   # def info?#(region)
