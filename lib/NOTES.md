@@ -1,7 +1,7 @@
 
 What will it look like for the user ?
 Welcome to this years March Madness Information Sheet
-Pick a Region ( East/West/Midwest/South
+Pick a Region ( East/West/Midwest/South)
 Pick ranking number ( 1- 16)
 Get Team Record Sheet  -or-  Team Math Stats
 
@@ -21,6 +21,7 @@ Vs. CONN  L 69 -57
 Vs.  VILL L 87 -53
 
 -------------------------------------
+Team 
 Team Math Stats
 Baylor University 
 [80,60,90,40,30,50,70,60]
@@ -51,5 +52,11 @@ Won - #
 Total - #
 Percent won#/total #
 
+
+----------------------------
+
+Create objects to connect with Team.rb 
+--> create pick a region 
+--> create 
 
 

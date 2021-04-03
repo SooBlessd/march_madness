@@ -1,7 +1,9 @@
-require 'pry'
+# require 'pry'
 class MarchMadness::CLI 
+  
     
   def call
+    MarchMadness::Team.new
     bracket
     # record_sheet
     # math_stats
