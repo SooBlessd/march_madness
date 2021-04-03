@@ -3,22 +3,37 @@ class MarchMadness::CLI
     
   def call
     bracket
-    
-    
-    
-    record_sheet
-    math_stats
+    # record_sheet
+    # math_stats
+    puts "DID YOU DO It!?"
+    goodbye
   end
 
   def bracket
     puts "Welcome to this years March Madness Information Sheet:"
     #displays list of teams for each region
     puts "Pick a Region: (E-East/W-West/M-Midwest/S-South)"
-     
-    puts "Pick ranking number (1 - 16)" 
-    #display team name
-    puts "Ohio State's" #interpolate team name
-    info?
+    region = gets.strip
+    pick_team #(team) send it the team
+    puts "YES"
+    # info?#(region)
+  end
+
+  def pick_team
+    input = nil
+    while input == nil || input != "exit"
+      puts "Pick ranking number (1 - 16) or type exit"
+      input = gets.strip
+      if input == "exit"
+        puts "See you later."
+      elsif input.to_i.between?(1,16)
+        puts "Team Name"
+        break
+      else 
+        puts "Not sure what team you would like, pick a team." 
+        input = nil
+      end
+    end 
   end
 
  
@@ -34,7 +49,7 @@ class MarchMadness::CLI
     Vs. CONN  L 69 - 57 
     Vs. VILL L 87 - 53
   }
-  puts team_record
+    puts team_record
   end
 
   def math_stats
@@ -59,8 +74,35 @@ class MarchMadness::CLI
     puts team_stats
   end
 
-  def info?
-    puts "R-Team Record Sheet  -or-  T-Team Math Stats"
-  end
+  # def info?#(region)
+  #   input = nil
+  #   while input != "exit"
+  #     # puts "Pick ranking number (1 - 16)"
+  #     # input  
+  #     # if input.to_i.between?(1,16)
+  #     #   puts "Team Name"
+  #       puts "R-Team Record Sheet  -or-  T-Team Math Stats"
+  #       # input
+  #       # if input.downcase == "r"
+  #       #   record_sheet
+  #       # if input.downcase == "t"
+  #       #   team_stats
+  #       # else
+  #       #   record_sheet 
+  #       #   team_stats
+  #       # end
+  #     # puts "Not sure what team you would like, pick a team or type exit." 
+  #     # input
+  #     # end 
+  #     # binding.pry
+  #   end
+  #   info? until gets.strip == "exit"
+  # end
+   
+  # end
+
+def goodbye
+  puts "See you soon!"
+end
 
 end
