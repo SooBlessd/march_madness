@@ -1,6 +1,66 @@
+require 'pry'
 class MarchMadness::CLI 
     
   def call
-    puts "This year's March Madenss Results:"  
+    bracket
+    
+    
+    
+    record_sheet
+    math_stats
   end
+
+  def bracket
+    puts "Welcome to this years March Madness Information Sheet:"
+    #displays list of teams for each region
+    puts "Pick a Region: (E-East/W-West/M-Midwest/S-South)"
+     
+    puts "Pick ranking number (1 - 16)" 
+    #display team name
+    puts "Ohio State's" #interpolate team name
+    info?
+  end
+
+ 
+  def record_sheet
+  #get team record sheet  
+  team_record = %{
+    Baylor University  Ranking #
+    
+    Post season - March Madness
+    vs. BAY L 79 - 55
+    
+    Regular season 
+    Vs. CONN  L 69 - 57 
+    Vs. VILL L 87 - 53
+  }
+  puts team_record
+  end
+
+  def math_stats
+    #gets all team's score 
+    team_stats = %{
+    Team Math Stats
+    Baylor University 
+      
+    scores: [80,60,90,40,30,50,70,60]
+      
+    [30,40,50,60,60,70,80,90]
+    Median - 60 points 
+    Mode - 60 points
+    Mean - 54 points per game 
+      
+    Game 
+    Won - 7
+    Lost - 1
+    Total - 8
+    % wins =⅞ - 88%
+    }
+    puts team_stats
+  end
+
+  def info?
+    puts "R-Team Record Sheet  -or-  T-Team Math Stats"
+  end
+
 end
