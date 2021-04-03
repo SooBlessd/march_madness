@@ -1,3 +1,5 @@
 #!/usr/bin/env ruby 
 
- puts "Hello World"
+require './lib/march_madness' 
+
+MarchMadness::CLI.new.call
