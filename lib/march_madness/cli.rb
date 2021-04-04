@@ -1,9 +1,14 @@
 # require 'pry'
 class MarchMadness::CLI 
+
+  attr_accessor :name
   
+  def initialize
+    @name = MarchMadness::Team.new 
+  end
    
   def call
-    MarchMadness::Team.new
+    @name
     pick
     # record_sheet
     # math_stats
@@ -56,6 +61,7 @@ class MarchMadness::CLI
 
 
   def pick_team
+    @name 
     input = nil
     while input == nil || input != "exit"
       puts "Pick ranking number (1 - 16) or type exit"
@@ -63,7 +69,7 @@ class MarchMadness::CLI
       if input == "exit"
         puts "See you later."
       elsif input.to_i.between?(1,16)
-        puts "Team Name"
+        puts "#{name}"
         break
       else 
         puts "Not sure what team you would like, pick a team." 
@@ -76,7 +82,7 @@ class MarchMadness::CLI
   def record_sheet
   #get team record sheet  
   team_record = %{
-    Baylor University  Ranking #
+    "#{@name}"  Ranking #
     
     Post season - March Madness
     vs. BAY L 79 - 55

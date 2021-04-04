@@ -58,5 +58,19 @@ Percent won#/total #
 Create objects to connect with Team.rb 
 --> create pick a region 
 --> create 
+-------------------------------
 
+What is a team? 
+a team has a name 
+a team has a ranking 
+a team has a region
+#a team has a regular season
+#a team has a post season
+a team has many scores 
+a team has many opponents 
+#a team  has wins 
+#a team has losses 
+--------------------
+scores has many wins 
+score has many losses
 
