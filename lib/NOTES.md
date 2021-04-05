@@ -61,16 +61,22 @@ Create objects to connect with Team.rb
 -------------------------------
 
 What is a team? 
+a team is associated with a bgit racket # bracket is an array of all teams
+a team has a home page url
 a team has a name 
 a team has a ranking 
 a team has a region
-#a team has a regular season
-#a team has a post season
-a team has many scores 
-a team has many opponents 
-#a team  has wins 
-#a team has losses 
+a team  has wins 
+a team has losses
+
 --------------------
+What is a schedule?
+takes in the team name
+a schedule has a regular season
+a schedule  has a post season
 scores has many wins 
 score has many losses
+a team has many scores 
+a team has many opponents 
+ 
 

@@ -18,6 +18,7 @@ class MarchMadness::CLI
 
   def pick
     puts "Welcome to this years March Madness Information Sheet:"
+    @@bracket = MarchMadness::Team.all
     #displays list of teams for each region
     # puts "Pick a Region: (E-East/W-West/M-Midwest/S-South)"
     pick_region
