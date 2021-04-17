@@ -8,6 +8,7 @@ require 'pry'
 require_relative "march_madness/version"
 require_relative './march_madness/cli'
 require_relative './march_madness/team'
+require_relative './march_madness/scraper'
 
 # module MarchMadness
 #   class Error < StandardError; end

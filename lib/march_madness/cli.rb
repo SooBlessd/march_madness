@@ -1,19 +1,20 @@
 # require 'pry'
 class MarchMadness::CLI 
 
-  attr_accessor :name
+  attr_accessor :name, :scraper
   
   def initialize
     @name = MarchMadness::Team.new 
+    @scraper = MarchMadness::Scraper.new
   end
    
   def call
-    @name
-    pick
-    # record_sheet
-    # math_stats
+  #   @name
+  #   pick
+  #   # record_sheet
+  #   # math_stats
     puts "DID YOU DO It!?"
-    goodbye
+  #   goodbye
   end
 
   def pick
@@ -25,7 +26,6 @@ class MarchMadness::CLI
     # region = gets.strip
     #if user exits on region --> send to goodbye
     pick_team #(team) send it the team
-    puts "YES"
     info?#(region)
   end
 
