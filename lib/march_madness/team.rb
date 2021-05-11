@@ -1,10 +1,13 @@
 class MarchMadness::Team
-    attr_accessor :scraper
+    attr_accessor :scraper, :name, :rank, :url
 
     @@all =[]
 
     def initialize
-        @scraper = scraper
+        @name = name
+        @rank = rank
+        @url = url 
+        # @scraper = scraper
        puts " I'm in team!" 
     end
 

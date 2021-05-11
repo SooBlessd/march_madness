@@ -4,7 +4,7 @@ class MarchMadness::CLI
   attr_accessor :name, :scraper
   
   def initialize
-    @name = MarchMadness::Team.new 
+    # @name = MarchMadness::Team.new 
     @scraper = MarchMadness::Scraper.new
   end
    
@@ -13,7 +13,7 @@ class MarchMadness::CLI
   #   pick
   #   # record_sheet
   #   # math_stats
-    puts "DID YOU DO It!?"
+  #   puts "DID YOU DO It!?"
   #   goodbye
   end
 
