@@ -78,5 +78,14 @@ scores has many wins
 score has many losses
 a team has many scores 
 a team has many opponents 
+
+_________________________
+regtitle is going to have the title of each region
+Do I look throught this element or the region to find all of the region's teams?
+West is match{1-8},
+------------------------
+I can get a list of teams 
+https://www.espn.com/mens-college-basketball/bpi/_/view/tournament/page/1
+
  
 
